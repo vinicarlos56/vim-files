@@ -3,6 +3,7 @@ syntax on
 filetype plugin indent on
 
 set number
+set nowrap
 let NERDTreeShowHidden=1
 
 colorscheme molokai
