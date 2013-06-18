@@ -2,7 +2,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-:set number
+set number
+let NERDTreeShowHidden=1
 
 colorscheme molokai
 
@@ -18,6 +19,8 @@ endif
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
+
+let g:Powerline_symbols = 'fancy'
 
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
