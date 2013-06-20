@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set clipboard=unnamedplus
 set number
 set nowrap
 let NERDTreeShowHidden=1
