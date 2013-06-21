@@ -32,3 +32,7 @@ let g:multi_cursor_quit_key='<Esc>'
 nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
+
+let Tlist_Use_Right_Window = 1
+
+nnoremap <A-1> :tabnext 1
