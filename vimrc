@@ -7,16 +7,14 @@ set number
 set nowrap
 let NERDTreeShowHidden=1
 
-colorscheme molokai
+colorscheme badwolf
 
 nmap <silent> <c-k> :wincmd k<CR>                                                         
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
 nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
 nmap <silent> <c-l> :wincmd l<CR>
 
-if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
-endif
+set t_Co=256
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
@@ -34,5 +32,3 @@ nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
 let Tlist_Use_Right_Window = 1
-
-nnoremap <A-1> :tabnext 1
