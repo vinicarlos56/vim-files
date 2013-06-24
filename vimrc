@@ -6,6 +6,8 @@ filetype plugin indent on
 set clipboard=unnamedplus
 set number
 set nowrap
+set shiftwidth=4
+
 let NERDTreeShowHidden=1
 
 colorscheme badwolf
@@ -38,8 +40,13 @@ nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
 let Tlist_Use_Right_Window = 1
+" let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1 
 
 " for command mode
 nmap <S-Tab> <<
 " for insert mode
 imap <S-Tab> <Esc><<i
+"to keep selected multiple identing on visual mode
+vnoremap > >gv 
+vnoremap <lt> <lt>gv 
