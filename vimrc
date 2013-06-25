@@ -50,3 +50,8 @@ imap <S-Tab> <Esc><<i
 "to keep selected multiple identing on visual mode
 vnoremap > >gv 
 vnoremap <lt> <lt>gv 
+
+"a better tab navigation
+nnoremap <C-t> :tabnew<CR>
+nnoremap gt :tabnext<CR>
+nnoremap <c-r> :Tlist<CR>
