@@ -54,4 +54,5 @@ vnoremap <lt> <lt>gv
 "a better tab navigation
 nnoremap <C-t> :tabnew<CR>
 nnoremap gt :tabnext<CR>
-nnoremap <c-r> :Tlist<CR>
+
+nmap <F8> :TagbarToggle<CR>
