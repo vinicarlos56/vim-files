@@ -26,3 +26,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim.git
+[submodule "bundle/tabline"]
+	path = bundle/tabline
+	url = git://github.com/mkitt/tabline.vim.git

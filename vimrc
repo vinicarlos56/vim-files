@@ -36,6 +36,7 @@ let g:multi_cursor_quit_key='<Esc>'
 
 "some mapping for fuzzyfinder plugin
 nmap ,f :FufFileWithCurrentBufferDir<CR>
+no derivative Powerline 11
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
@@ -56,3 +57,12 @@ nnoremap <C-t> :tabnew<CR>
 nnoremap gt :tabnext<CR>
 
 nmap <F8> :TagbarToggle<CR>
+
+if has("gui_running")
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
+    set guioptions-=e  "remove remove the gui tab
+endif
