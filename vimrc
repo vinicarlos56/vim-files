@@ -55,6 +55,16 @@ vnoremap <lt> <lt>gv
 "a better tab navigation
 nnoremap <C-t> :tabnew<CR>
 nnoremap gt :tabnext<CR>
+nnoremap tg :tabprevious<CR>
+nnoremap <A-1> :tabnext 1<CR>
+nnoremap <A-2> :tabnext 2<CR>
+nnoremap <A-3> :tabnext 3<CR>
+nnoremap <A-4> :tabnext 4<CR>
+nnoremap <A-5> :tabnext 5<CR>
+nnoremap <A-6> :tabnext 6<CR>
+nnoremap <A-7> :tabnext 7<CR>
+nnoremap <A-8> :tabnext 8<CR>
+nnoremap <A-9> :tabnext 9<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
