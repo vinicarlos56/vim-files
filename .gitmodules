@@ -29,6 +29,4 @@
 [submodule "bundle/tabline"]
 	path = bundle/tabline
 	url = git://github.com/mkitt/tabline.vim.git
-[submodule "bundle/vim-autoclose"]
-	path = bundle/vim-autoclose
-	url = https://github.com/Townk/vim-autoclose.git
+
