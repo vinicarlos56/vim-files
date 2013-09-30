@@ -7,10 +7,16 @@ set clipboard=unnamedplus
 set number
 set nowrap
 set shiftwidth=4
+set hlsearch
 
 let NERDTreeShowHidden=1
 
-colorscheme badwolf
+set background=dark
+colorscheme solarized
+
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
 
 nmap <silent> <c-k> :wincmd k<CR>                                                         
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
