@@ -72,7 +72,7 @@ nnoremap <A-7> :tabnext 7<CR>
 nnoremap <A-8> :tabnext 8<CR>
 nnoremap <A-9> :tabnext 9<CR>
 
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :NERDTreeToggle<CR>
 
 if has("gui_running")
     set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
