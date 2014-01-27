@@ -85,3 +85,6 @@ if has("gui_running")
     set guioptions-=L  "remove left-hand scroll bar
     set guioptions-=e  "remove remove the gui tab
 endif
+
+" Press F4 to toggle highlighting on/off, and show current value.
+noremap <F4> :set hlsearch! hlsearch?<CR>
