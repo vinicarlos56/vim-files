@@ -29,7 +29,3 @@
 [submodule "bundle/tabline"]
 	path = bundle/tabline
 	url = git://github.com/mkitt/tabline.vim.git
-
-[submodule "/home/carlos/.vim/bundle/vim-airline"]
-	path = /home/carlos/.vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
