@@ -28,13 +28,14 @@ nmap <silent> <c-l> :wincmd l<CR>
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
 
-"enabling powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"air-line config
+let g:airline_powerline_fonts = 1
 
-"powerline symbols enabled
-let g:Powerline_symbols = 'fancy'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.space = "\ua0"
 
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
