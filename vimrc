@@ -2,6 +2,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+call pathogen#helptags()
+
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
@@ -88,3 +90,8 @@ endif
 
 " Press F4 to toggle highlighting on/off, and show current value.
 noremap <F4> :set hlsearch! hlsearch?<CR>
+
+let g:vdebug_options = {
+\ 'server': '127.0.0.1',
+\ 'port': '9001'
+\}
