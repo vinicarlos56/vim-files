@@ -2,11 +2,15 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+call pathogen#helptags()
+
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
 set nowrap
 set shiftwidth=4
+set tabstop=4
+set expandtab
 set hlsearch
 
 let NERDTreeShowHidden=1
@@ -26,13 +30,14 @@ nmap <silent> <c-l> :wincmd l<CR>
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
 
-"enabling powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"air-line config
+let g:airline_powerline_fonts = 1
 
-"powerline symbols enabled
-let g:Powerline_symbols = 'fancy'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.space = "\ua0"
 
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
@@ -82,3 +87,11 @@ if has("gui_running")
     set guioptions-=L  "remove left-hand scroll bar
     set guioptions-=e  "remove remove the gui tab
 endif
+
+" Press F4 to toggle highlighting on/off, and show current value.
+noremap <F4> :set hlsearch! hlsearch?<CR>
+
+let g:vdebug_options = {
+\ 'server': '127.0.0.1',
+\ 'port': '9001'
+\}
