@@ -45,12 +45,6 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
-"some mapping for fuzzyfinder plugin
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-no derivative Powerline 11
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
-
 let Tlist_Use_Right_Window = 1
 " let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1 
