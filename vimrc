@@ -73,8 +73,9 @@ nnoremap <A-9> :tabnext 9<CR>
 
 nmap <F8> :NERDTreeToggle<CR>
 
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+
 if has("gui_running")
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
     set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
@@ -89,3 +90,35 @@ let g:vdebug_options = {
 \ 'server': '127.0.0.1',
 \ 'port': '9001'
 \}
+
+let NERDTreeIgnore = ['\.swp$']
+
+function! CopyMatches(reg)
+    let hits = []
+    %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/ge
+    let reg = empty(a:reg) ? '+' : a:reg
+    let un = SortUnique( hits )
+    execute 'let @'.reg.' = join(un, "\n") . "\n"'
+endfunction
+
+command! -register CopyMatches call CopyMatches(<q-reg>)
+
+" Works like sort(), optionally taking in a comparator (just like the
+" " original), except that duplicate entries will be removed.
+function! SortUnique( list, ... )
+    let dictionary = {}
+
+    for i in a:list
+        execute "let dictionary[ '" . i . "' ] = ''"
+    endfor
+
+    let result = []
+
+    if ( exists( 'a:1' ) )
+        let result = sort( keys( dictionary ), a:1 )
+    else
+        let result = sort( keys( dictionary ) )
+    endif
+
+    return result
+endfunction
