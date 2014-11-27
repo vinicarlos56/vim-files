@@ -4,6 +4,6 @@ git submodule init
 
 git submodule update
 
-mkdir $HOME/.fonts/
+mkdir -p $HOME/.fonts/
 
 cp powerline-fonts/UbuntuMono/Ubuntu\ Mono\ derivative\ Powerline.ttf $HOME/.fonts/
