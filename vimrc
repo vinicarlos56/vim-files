@@ -122,3 +122,5 @@ function! SortUnique( list, ... )
 
     return result
 endfunction
+
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
