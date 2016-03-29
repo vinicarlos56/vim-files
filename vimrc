@@ -2,8 +2,11 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-call pathogen#helptags()
+autocmd BufNewFile,BufRead *.js.in.tmpl set ft=javascript
 
+call pathogen#helptags()
+let g:ctrlp_custom_ignore = 'ninja_build\|regress_final\|node_modules'
+let g:linters_disabled_filetypes = ['javascript']
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
@@ -24,6 +27,7 @@ endw
 set timeout ttimeoutlen=50
 
 let NERDTreeShowHidden=1
+let NERDTreeDirArrows=0
 
 set background=dark
 colorscheme solarized
@@ -39,7 +43,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
-
+set encoding=utf-8
 "air-line config
 let g:airline_powerline_fonts = 1
 
@@ -98,7 +102,7 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 
 let g:vdebug_options = {
 \ 'server': '127.0.0.1',
-\ 'port': '9001'
+\ 'port': '9000'
 \}
 
 let NERDTreeIgnore = ['\.swp$']
