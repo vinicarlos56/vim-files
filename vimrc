@@ -3,7 +3,7 @@ syntax on
 filetype plugin indent on
 
 call pathogen#helptags()
-
+let g:linters_disabled_filetypes = ['java']
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
@@ -12,6 +12,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set hlsearch
+set linespace=10
 
 " fix alt mapping on terminal
 let c='0'
@@ -39,6 +40,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
+set encoding=utf-8
 
 "air-line config
 let g:airline_powerline_fonts = 1
@@ -83,7 +85,7 @@ nnoremap <A-9> :tabnext 9<CR>
 
 nmap <F8> :NERDTreeToggle<CR>
 
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
 
 if has("gui_running")
     set guioptions-=m  "remove menu bar
