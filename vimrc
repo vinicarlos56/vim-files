@@ -2,8 +2,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+autocmd BufNewFile,BufRead *.js.in.tmpl set ft=javascript
+
 call pathogen#helptags()
-let g:linters_disabled_filetypes = ['java']
+let g:ctrlp_custom_ignore = 'ninja_build\|regress_final\|node_modules'
+let g:linters_disabled_filetypes = ['javascript','java']
+
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
@@ -25,6 +29,7 @@ endw
 set timeout ttimeoutlen=50
 
 let NERDTreeShowHidden=1
+let NERDTreeDirArrows=0
 
 set background=dark
 colorscheme solarized
@@ -100,7 +105,7 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 
 let g:vdebug_options = {
 \ 'server': '127.0.0.1',
-\ 'port': '9001'
+\ 'port': '9000'
 \}
 
 let NERDTreeIgnore = ['\.swp$']
