@@ -48,13 +48,15 @@ set t_Co=256
 set encoding=utf-8
 
 "air-line config
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
 let g:airline_symbols.space = "\ua0"
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
