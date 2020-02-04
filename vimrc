@@ -1,6 +1,9 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set foldmethod=indent
+" clear vim folding without disabling it
+autocmd FileType * exe "normal zR"
 
 autocmd BufNewFile,BufRead *.js.in.tmpl set ft=javascript
 
@@ -38,9 +41,9 @@ let g:solarized_bold=1
 let g:solarized_underline=1
 let g:solarized_italic=1
 
-nmap <silent> <c-k> :wincmd k<CR>                                                         
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 "set terminal colors to 256 for a better colorscheme
@@ -66,15 +69,15 @@ let g:multi_cursor_quit_key='<Esc>'
 
 let Tlist_Use_Right_Window = 1
 " let Tlist_Show_One_File = 1
-let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Exit_OnlyWindow = 1
 
 " for command mode
 nmap <S-Tab> <<
 " for insert mode
 imap <S-Tab> <Esc><<i
 "to keep selected multiple identing on visual mode
-vnoremap > >gv 
-vnoremap <lt> <lt>gv 
+vnoremap > >gv
+vnoremap <lt> <lt>gv
 
 "a better tab navigation
 nnoremap <C-t> :tabnew<CR>
@@ -143,3 +146,27 @@ function! SortUnique( list, ... )
 endfunction
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+
+" go
+" vim-go
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 1
+
+" fugitive
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Ggrep<Space>
+nnoremap <leader>gd :Gdiff<CR>
+
+" quickfix list
+nnoremap <leader>o :copen<CR>
+nnoremap <leader>c :cclose<CR>
