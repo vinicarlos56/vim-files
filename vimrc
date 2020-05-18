@@ -170,3 +170,5 @@ nnoremap <leader>gd :Gdiff<CR>
 " quickfix list
 nnoremap <leader>o :copen<CR>
 nnoremap <leader>c :cclose<CR>
+
+#test pr template
