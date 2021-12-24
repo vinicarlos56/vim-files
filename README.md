@@ -29,6 +29,19 @@ Modules used:
 * vdebug
 * vim-coffee-script
 
+New modules:
+
+* coc.nvim
+* fzf.vim
+* vim-go
+* vim-polyglot
+
+Required tools:
+
+* [fzf](https://github.com/junegunn/fzf)
+* [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+* [kotlin-language-server](https://github.com/fwcd/kotlin-language-server)
+
 Fonts by:
 
 * powerline-fonts
