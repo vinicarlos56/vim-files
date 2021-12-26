@@ -1,5 +1,7 @@
 execute pathogen#infect()
 syntax on
+" Use new regular expression engine
+set re=0
 filetype plugin indent on
 set foldmethod=indent
 " clear vim folding without disabling it
@@ -336,7 +338,8 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+let g:airline_section_c = '%t %#LineNr#%{coc#status()}'
 
 " Mappings for CoCList
 " Show all diagnostics.
