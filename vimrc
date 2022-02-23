@@ -33,7 +33,7 @@ endw
 
 set timeout ttimeoutlen=50
 
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 let NERDTreeDirArrows=1
 
 set background=light
@@ -365,3 +365,10 @@ set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 nnoremap <silent><nowait> <C-p> :GFiles<CR>
+
+" vim hardcodes background color erase even if the terminfo file does
+" not contain bce (not to mention that libvte based terminals
+" incorrectly contain bce in their terminfo files). This causes
+" incorrect background rendering when using a color theme with a
+" background color.
+let &t_ut=''
