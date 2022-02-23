@@ -1,0 +1,9 @@
+{
+    "languageserver": {
+        "kotlin": {
+            "command": "/Users/carlosvinicius/Documents/projects/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+            "rootPatterns":["faster-sorting-hat-api-server","faster-core-configuration","faster-common-dynamodb","faster-remote-config-server"],
+            "filetypes": ["kotlin"]
+        }
+    }
+}
