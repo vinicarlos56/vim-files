@@ -95,8 +95,8 @@ nnoremap <A-7> :tabnext 7<CR>
 nnoremap <A-8> :tabnext 8<CR>
 nnoremap <A-9> :tabnext 9<CR>
 
-nmap <F8> :NERDTreeToggle<CR>
-nmap <F9> :NERDTreeFind<CR>
+nmap <tab> :NERDTreeToggle<CR>
+nmap <tab><tab> :NERDTreeFind<CR>
 
 set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
 
